@@ -81,18 +81,66 @@ int Racional::getDenominador(void) {
     return this->denominador;
 }
 
-Racional Racional::suma(Racional r2) {
-    Racional resultado;
-
-    if (this->denominador == r2.getDenominador()) {
-        return Racional(this->numerador + r2.getNumerador(), this->denominador);
+Racional Racional::suma(Racional r) {
+    if (this->denominador == r.getDenominador()) {
+        return Racional(this->numerador + r.getNumerador(), this->denominador);
     }
 
-    int num; //nuevo numerador
-    int den; //nuevo denominador
-
-    num = (this->denominador * r2.getNumerador()) + (r2.getDenominador() * this->numerador);
-    den = this->denominador * r2.getDenominador();
+    int num, den;
+    num = (this->denominador * r.getNumerador()) + (r.getDenominador() * this->numerador);
+    den = this->denominador * r.getDenominador();
 
     return Racional(num, den);
+}
+
+Racional Racional::resta(Racional r) {
+    if (this->denominador == r.getDenominador()) {
+        return Racional(this->numerador - r.getNumerador(), this->denominador);
+    }
+
+    int num, den;
+    num = (this->denominador * r.getNumerador()) - (r.getDenominador() * this->numerador);
+    den = this->denominador * r.getDenominador();
+
+    return Racional(num, den);
+}
+
+Racional Racional::multiplicacion(Racional r) {
+    int num, den;
+    num = this->numerador * r.getNumerador();
+    den = this->denominador * r.getDenominador();
+
+    return Racional(num, den);
+}
+
+Racional Racional::division(Racional r) {
+    int num, den;
+    num = this->numerador * r.getDenominador();
+    den = this->denominador * r.getNumerador();
+
+    return Racional(num, den);
+}
+
+bool Racional::esIgual(Racional r) {
+    int num1 = this->numerador;
+    int num2 = r.getNumerador();
+    int den1 = this->denominador;
+    int den2 = r.getDenominador();
+
+    if ((num1 == num2) && (den1 == den2))
+        return true;
+    else
+        return false;
+}
+
+bool Racional::esMayor(Racional r) {
+    int num1 = this->numerador;
+    int num2 = r.getNumerador();
+    int den1 = this->denominador;
+    int den2 = r.getDenominador();
+
+    if ((num1 > num2) && (den1 > den2))
+        return true;
+    else
+        return false;
 }

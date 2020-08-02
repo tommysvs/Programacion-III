@@ -24,6 +24,11 @@ public:
     int getDenominador(void);
 
     Racional suma(Racional);
+    Racional resta(Racional);
+    Racional multiplicacion(Racional);
+    Racional division(Racional);
+    bool esIgual(Racional);
+    bool esMayor(Racional);
 };
 
 #endif#pragma once
