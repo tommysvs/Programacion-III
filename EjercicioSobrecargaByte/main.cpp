@@ -11,5 +11,9 @@ int main() {
 	cout << "Binario 1: " << b1;
 	cout << "Binario 2: " << b2;
 
+	Byte b3 = b1 + b2;
+	cout << "b1 + b2: " << b3 << endl;
+	cout << "Forma decimal b3: " << b3.obtenerDecimal() << endl;
+
 	_getch();
 }

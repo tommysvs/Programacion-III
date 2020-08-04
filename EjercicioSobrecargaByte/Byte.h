@@ -9,6 +9,7 @@ using namespace std;
 class Byte {
 	//definiciones de funciones no miembro de la clase
 	friend ostream& operator<<(ostream&, const Byte&);
+	friend Byte operator+(const Byte&, const Byte&);
 
 private:
 	int bits[8];
@@ -19,6 +20,8 @@ public:
 
 	//destructor de clase
 	~Byte();
+
+	int obtenerDecimal();
 };
 
 #endif
