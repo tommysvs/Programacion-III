@@ -19,17 +19,18 @@ int main() {
 	//------------------------------------------------------------
 
 	char nombreC[20];
-	char apellidosC[40];
+	char apellidosC[20];
 
 	cout << "Escriba un nombre: ";
 	cin >> nombreC;
+	cin.ignore();
 
 	cout << "Escriba sus apellidos: ";
 	string apellidosS;
 	getline(cin, apellidosS);
 
 	char* nombreCompletoC;
-	nombreCompletoC = new char[strlen(nombreC) + strlen(apellidosS.c_str()) + 1];
+	nombreCompletoC = new char[strlen(nombreC) + strlen(apellidosS.c_str()) + 2];
 
 	strcpy_s(nombreCompletoC, strlen(nombreC) + 1, nombreC);
 	strcat_s(nombreCompletoC, strlen(nombreC) + strlen(apellidosS.c_str()) + 1, apellidosS.c_str());
