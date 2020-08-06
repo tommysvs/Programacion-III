@@ -1,3 +1,4 @@
+#include <string>
 #include "EnteroGrande.h"
 
 using namespace std;
@@ -64,4 +65,38 @@ ostream& operator<<(ostream& out, const EnteroGrande& _entero) {
 	out << " }\n";
 
 	return out;
+}
+
+EnteroGrande operator+(const EnteroGrande& entero1, const EnteroGrande& entero2) {
+	EnteroGrande resultado;
+	int acarreo = 0;
+	int posicion = LIMITE - 1;
+	int cantidadCifras = strlen(entero1.cValor) > strlen(entero2.cValor) ? strlen(entero1.cValor) : strlen(entero2.cValor);
+	string sNumero;
+
+	for (int i = LIMITE - 1; i >= LIMITE - cantidadCifras; i--) {
+		int suma = entero1.iValor[i] + entero2.iValor[i] + acarreo;
+
+		if (suma > 9) {
+			resultado.iValor[posicion--] = suma - 10;
+			acarreo = 1;
+
+			sNumero = to_string(suma - 10) + sNumero;
+		}
+		else {
+			resultado.iValor[posicion--] = suma;
+			acarreo = 0;
+
+			sNumero = to_string(suma) + sNumero;
+		}
+	}
+
+	if (acarreo == 1) {
+		resultado.iValor[posicion] = acarreo;
+		sNumero = to_string(acarreo) + sNumero;
+	}
+
+	strcpy_s(resultado.cValor, strlen(sNumero.c_str()) + 1, sNumero.c_str());
+
+	return resultado;
 }

@@ -14,6 +14,7 @@ class EnteroGrande {
 
 	friend ostream& operator<<(ostream&, const EnteroGrande&);
 	friend istream& operator>>(istream&, EnteroGrande&);
+	friend EnteroGrande operator+(const EnteroGrande&, const EnteroGrande&);
 
 private:
 	int* iValor; //arreglo dinamico
