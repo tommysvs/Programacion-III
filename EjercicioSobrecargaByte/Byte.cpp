@@ -17,6 +17,30 @@ Byte::Byte(const char* _byte) {
 //destructor
 Byte::~Byte() {}
 
+int Byte::obtenerDecimal() {
+	int nuevo = 0;
+	int exp = 0;
+
+	for (int i = 8 - 1; i >= 0; i--, exp++) {
+		if (this->bits[i] == 1)
+			nuevo += pow(2, exp);
+	}
+
+	return nuevo;
+}
+
+int Byte::obtenerOctal() {
+	int nuevo = 0;
+
+	return nuevo;
+}
+
+string Byte::obtenerHexa() {
+	string nuevo;
+
+	return nuevo;
+}
+
 ostream& operator<<(ostream& out, const Byte& _byte) {
 	out << "{ ";
 	for (int i = 0; i < 8; i++) {
@@ -81,14 +105,50 @@ Byte operator+(const Byte& _b1, const Byte& _b2) {
 	return nuevo;
 }
 
-int Byte::obtenerDecimal() {
-	int resultado = 0;
-	int exp = 0;
+Byte operator-(const Byte& _b1, const Byte& _b2) {
+	Byte nuevo;
 
-	for (int i = 8 - 1; i >= 0; i--, exp++) {
-		if (this->bits[i] == 1)
-			resultado += pow(2, exp);
-	}
+	return nuevo;
+}
 
-	return resultado;
+Byte operator*(const Byte& _b1, const Byte& _b2) {
+	Byte nuevo;
+
+	return nuevo;
+}
+
+Byte operator&(const Byte& _b1, const Byte& _b2) {
+	Byte nuevo;
+
+	for (int i = 0; i < 8; i++)
+		nuevo.bits[i] = _b1.bits[i] && _b2.bits[i] == 1 ? 1 : 0;
+
+	return nuevo;
+}
+
+Byte operator|(const Byte& _b1, const Byte& _b2) {
+	Byte nuevo;
+
+	for (int i = 0; i < 8; i++)
+		nuevo.bits[i] = _b1.bits[i] || _b2.bits[i] == 1 ? 1 : 0;
+
+	return nuevo;
+}
+
+Byte operator^(const Byte& _b1, const Byte& _b2) {
+	Byte nuevo;
+
+	for (int i = 0; i < 8; i++)
+		nuevo.bits[i] = _b1.bits[i] == _b2.bits[i] ? 0 : 1;
+
+	return nuevo;
+}
+
+Byte Byte::operator~() {
+	Byte nuevo;
+
+	for (int i = 8 - 1; i >= 0; i--)
+		nuevo.bits[i] = this->bits[i] == 1 ? 0 : 1;
+
+	return nuevo;
 }

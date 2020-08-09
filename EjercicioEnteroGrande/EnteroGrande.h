@@ -9,9 +9,6 @@
 using namespace std;
 
 class EnteroGrande {
-	//salida de flujo de datos --> cout
-	//insercion/entrada de flujo de datos --> cin
-
 	friend ostream& operator<<(ostream&, const EnteroGrande&);
 	friend istream& operator>>(istream&, EnteroGrande&);
 	friend EnteroGrande operator+(const EnteroGrande&, const EnteroGrande&);

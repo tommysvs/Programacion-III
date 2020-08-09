@@ -10,6 +10,11 @@ class Byte {
 	//definiciones de funciones no miembro de la clase
 	friend ostream& operator<<(ostream&, const Byte&);
 	friend Byte operator+(const Byte&, const Byte&);
+	friend Byte operator-(const Byte&, const Byte&);
+	friend Byte operator*(const Byte&, const Byte&);
+	friend Byte operator&(const Byte&, const Byte&);
+	friend Byte operator|(const Byte&, const Byte&);
+	friend Byte operator^(const Byte&, const Byte&);
 
 private:
 	int bits[8];
@@ -22,6 +27,9 @@ public:
 	~Byte();
 
 	int obtenerDecimal();
+	int obtenerOctal();
+	string obtenerHexa();
+	Byte operator~();
 };
 
 #endif
