@@ -1,3 +1,4 @@
+#include <conio.h>
 #include "Cadena.h"
 
 int main() {
@@ -19,5 +20,5 @@ int main() {
 	c4 = c0 + c3;
 	cout << "c4: " << c4;
 
-	return 0;
+	_getch();
 }
