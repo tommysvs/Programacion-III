@@ -1,9 +1,19 @@
 #include "Cadena.h"
 #include<string>
 
-Cadena::Cadena() {}
+Cadena::Cadena() {
+
+}
 
 Cadena::Cadena(const char* _cad) {
+	int i = 0;
+	char nuevo = _cad[i];
+
+	while(nuevo != '\0') {
+		i++;
+		nuevo = _cad[i];
+	}
+
 
 }
 

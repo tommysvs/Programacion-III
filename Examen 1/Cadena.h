@@ -12,7 +12,7 @@ class Cadena {
 	friend ostream& operator<<(ostream&, const Cadena&);
 	friend Cadena operator+(const Cadena&, const Cadena&);
 private:
-	int strL[10];
+	char strL[100];
 public:
 	Cadena();
 	Cadena(const char*);
