@@ -7,7 +7,7 @@ int main() {
 	Cadena c2 = c0;
 	Cadena c3("Mundo");
 
-	cout << "c0: " << c0 << "\nc1:" << c1 << "\nc2" << c2 << "\nc3" << endl;
+	cout << "c0: " << c0 << "\nc1: " << c1 << "\nc2: " << c2 << "\nc3: " << c3 << "\n\n";
 
 	if (c2.StrCmp(c3) == 0)
 		cout << "c2 y c3 son iguales\n";
