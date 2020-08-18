@@ -6,15 +6,9 @@ Cadena::Cadena() {
 }
 
 Cadena::Cadena(const char* _cad) {
-	int i = 0;
-	char nuevo = _cad[i];
-
-	while(nuevo != '\0') {
-		i++;
-		nuevo = _cad[i];
+	for (int i = 0; i < strlen(_cad); i++) {
+		strL[i] = _cad[i];
 	}
-
-
 }
 
 int Cadena::StrCmp(Cadena _cad) {
@@ -48,6 +42,8 @@ ostream& operator<<(ostream& out, const Cadena& _cad) {
 
 Cadena operator+(const Cadena& _c1, const Cadena& _c2) {
 	Cadena nuevo;
+
+		
 
 	return nuevo;
 }
