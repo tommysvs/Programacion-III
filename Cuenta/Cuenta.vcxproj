@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8b942a37-bffc-488f-a15b-6ad4d523797b}</ProjectGuid>
-    <RootNamespace>EjemploPolimorfismo</RootNamespace>
+    <ProjectGuid>{81b55466-81cc-4c74-90eb-02a864088dd1}</ProjectGuid>
+    <RootNamespace>Cuenta</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,18 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="circulo.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="rectangulo.cpp" />
-    <ClCompile Include="rombo.cpp" />
-    <ClCompile Include="trianguloRectangulo.cpp" />
+    <ClInclude Include="Cuenta.h" />
+    <ClInclude Include="CuentaAhorros.h" />
+    <ClInclude Include="CuentaCheques.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="circulo.h" />
-    <ClInclude Include="figura2d.h" />
-    <ClInclude Include="rectangulo.h" />
-    <ClInclude Include="rombo.h" />
-    <ClInclude Include="trianguloRectangulo.h" />
+    <ClCompile Include="Cuenta.cpp" />
+    <ClCompile Include="CuentaAhorros.cpp" />
+    <ClCompile Include="CuentaCheques.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
