@@ -6,7 +6,8 @@
 enum tipoFigura {
 	tRectangulo, //0
 	tTrianguloRectangulo, //1
-	tCirculo //2
+	tCirculo, //2
+	tRombo //3
 };
 
 class figura2d {
