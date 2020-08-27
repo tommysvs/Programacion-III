@@ -37,6 +37,16 @@ int main() {
 	cuboPorReferencia(&numero);
 	cout << "El valor de numero es: " << numero << endl;
 
+	float notas[5];
+	notas[0] = 25;
+	notas[1] = 92;
+	notas[2] = 83;
+	notas[3] = 72;
+	notas[4] = 61;
+
+	for (int i = 0; i < 5; i++)
+		cout << "Direccion de memoria en arreglo con indice [" << i << "]: " << &notas[i] << "\n";
+
 	_getch();
 }
 

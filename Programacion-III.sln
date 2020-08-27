@@ -43,6 +43,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Semana 6", "Semana 6", "{1E
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Apuntadores", "Apuntadores\Apuntadores.vcxproj", "{3538F990-566D-4E52-A032-8A238992A7A5}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ListaSimple", "ListaSimple\ListaSimple.vcxproj", "{A25F62ED-0F41-4D40-AD04-5D8774D09356}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -147,6 +149,14 @@ Global
 		{3538F990-566D-4E52-A032-8A238992A7A5}.Release|x64.Build.0 = Release|x64
 		{3538F990-566D-4E52-A032-8A238992A7A5}.Release|x86.ActiveCfg = Release|Win32
 		{3538F990-566D-4E52-A032-8A238992A7A5}.Release|x86.Build.0 = Release|Win32
+		{A25F62ED-0F41-4D40-AD04-5D8774D09356}.Debug|x64.ActiveCfg = Debug|x64
+		{A25F62ED-0F41-4D40-AD04-5D8774D09356}.Debug|x64.Build.0 = Debug|x64
+		{A25F62ED-0F41-4D40-AD04-5D8774D09356}.Debug|x86.ActiveCfg = Debug|Win32
+		{A25F62ED-0F41-4D40-AD04-5D8774D09356}.Debug|x86.Build.0 = Debug|Win32
+		{A25F62ED-0F41-4D40-AD04-5D8774D09356}.Release|x64.ActiveCfg = Release|x64
+		{A25F62ED-0F41-4D40-AD04-5D8774D09356}.Release|x64.Build.0 = Release|x64
+		{A25F62ED-0F41-4D40-AD04-5D8774D09356}.Release|x86.ActiveCfg = Release|Win32
+		{A25F62ED-0F41-4D40-AD04-5D8774D09356}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -164,6 +174,7 @@ Global
 		{81B55466-81CC-4C74-90EB-02A864088DD1} = {143181E1-3B2B-4100-A358-BE7290AF4540}
 		{C850CA8F-0828-4B57-AEAE-75008752FFA9} = {8B525AAD-8423-4EC2-A431-CA460EB0A314}
 		{3538F990-566D-4E52-A032-8A238992A7A5} = {1E153EA1-AFF1-4CA0-8296-FEB7533D2538}
+		{A25F62ED-0F41-4D40-AD04-5D8774D09356} = {1E153EA1-AFF1-4CA0-8296-FEB7533D2538}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A211FE17-4D56-4153-912D-19130512CFDB}
