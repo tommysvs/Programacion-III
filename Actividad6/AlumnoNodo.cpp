@@ -1,7 +1,7 @@
 #include <string>
 #include "AlumnoNodo.h"
 
-AlumnoNodo::AlumnoNodo() : nombre(nullptr), nota(0), siguiente(nullptr) {}
+AlumnoNodo::AlumnoNodo() : nombre(nullptr), nota(0.0), siguiente(nullptr) {}
 
 AlumnoNodo::AlumnoNodo(const char* _nombre, float _nota) {
 	setNombre(_nombre);
@@ -14,18 +14,18 @@ void AlumnoNodo::setNombre(const char* _nombre) {
 }
 
 void AlumnoNodo::setNota(float _nota) {
-	nota = _nota;
+	this->nota = _nota;
 }
 
 void AlumnoNodo::setSiguiente(AlumnoNodo* _siguiente) {
-	siguiente = _siguiente;
+	this->siguiente = _siguiente;
 }
 
 char* AlumnoNodo::getNombre() {
 	return this->nombre;
 }
 
-int AlumnoNodo::getNota() {
+float AlumnoNodo::getNota() {
 	return this->nota;
 }
 
