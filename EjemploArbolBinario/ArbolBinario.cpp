@@ -13,16 +13,40 @@ NodoArbol* ArbolBinario::agregarRec(NodoArbol* _raiz, const char* _nombre) {
 	if (_raiz == nullptr) {
 		NodoArbol* nuevo = new NodoArbol(_nombre, nullptr, nullptr);
 		_raiz = nuevo;
+		cout << "Nodo agregado." << endl;
 	}
 	else if (strcmp(_nombre, _raiz->getNombre()) > 0) {
 		_raiz->setHijoDerecho(agregarRec(_raiz->getHijoDerecho(), _nombre));
 	}
+	else if (strcmp(_nombre, _raiz->getNombre()) < 0) {
+		_raiz->setHijoIzquierdo(agregarRec(_raiz->getHijoIzquierdo(), _nombre));
+	}
+
+	return _raiz;
 }
 
-void imprimir() {
-
+void ArbolBinario::imprimir() {
+	imprimirRec(raiz);
 }
 
-void imprimirRec() {
+void ArbolBinario::imprimirRec(NodoArbol* _raiz) {
+	if (_raiz == nullptr)
+		return;
 
+	cout << "[ " << _raiz->getNombre() << " ]";
+	imprimirRec(_raiz->getHijoIzquierdo());
+	imprimirRec(_raiz->getHijoDerecho());
+}
+
+void ArbolBinario::imprimirAscendente() {
+	imprimirAscRec(raiz);
+}
+
+void ArbolBinario::imprimirAscRec(NodoArbol* _raiz) {
+	if (_raiz == nullptr)
+		return;
+
+	imprimirAscRec(_raiz->getHijoIzquierdo());
+	cout << "[ " << _raiz->getNombre() << " ]";
+	imprimirAscRec(_raiz->getHijoDerecho());
 }

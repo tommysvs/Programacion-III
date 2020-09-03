@@ -139,14 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="maini.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="ArbolBinario.h" />
     <ClInclude Include="NodoArbol.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ArbolBinario.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="NodoArbol.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
