@@ -8,12 +8,12 @@ void Nodo::setValor(int _valor) {
 	this->valor = _valor;
 }
 
-void Nodo::setAnterior(Nodo* _siguiente) {
-	this->anterior = _siguiente;
+void Nodo::setAnterior(Nodo* _anterior) {
+	this->anterior = _anterior;
 }
 
-void Nodo::setSiguiente(Nodo* _anterior) {
-	this->siguiente = _anterior;
+void Nodo::setSiguiente(Nodo* _siguiente) {
+	this->siguiente = _siguiente;
 }
 
 int Nodo::getValor() {

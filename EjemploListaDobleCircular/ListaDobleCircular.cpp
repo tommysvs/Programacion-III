@@ -1,9 +1,9 @@
 #include <iostream>
 #include "ListaDobleCircular.h"
 
-ListaDobleCircular::ListaDobleCircular() : primero(nullptr), ultimo(nullptr) {}
-
 using namespace std;
+
+ListaDobleCircular::ListaDobleCircular() : primero(nullptr), ultimo(nullptr) {}
 
 bool ListaDobleCircular::estaVacia() {
 	return primero == nullptr;
@@ -13,8 +13,7 @@ void ListaDobleCircular::agregarElemento(int _valor) {
 	Nodo* nuevo = new Nodo(_valor, nullptr, nullptr);
 
 	if (estaVacia()) {
-		primero = nuevo;
-		ultimo = nuevo;
+		primero = ultimo = nuevo;
 
 		ultimo->setSiguiente(primero);
 		primero->setAnterior(ultimo);
@@ -26,7 +25,7 @@ void ListaDobleCircular::agregarElemento(int _valor) {
 		ultimo = nuevo;
 
 		ultimo->setSiguiente(primero);
-		nuevo->setAnterior(ultimo);
+		primero->setAnterior(ultimo);
 	}
 
 	cout << "Nodo agregado." << endl;
@@ -38,7 +37,7 @@ void ListaDobleCircular::imprimir() {
 	do {
 		cout << "[" << actual->getValor() << " ] ";
 		actual = actual->getSiguiente();
-	} while (primero != nullptr);
+	} while (actual != primero);
 
 	cout << "\n";
 }
