@@ -1,3 +1,4 @@
+#include <conio.h>
 #include "EmpresaLista.h"
 
 int main() {
@@ -13,4 +14,6 @@ int main() {
 	empleado.eliminarEmpleado(1002);
 
 	empleado.imprimirEmpleados();
+
+	_getch();
 }

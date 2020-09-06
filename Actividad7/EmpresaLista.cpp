@@ -49,4 +49,8 @@ void EmpresaLista::imprimirEmpleados() {
 
 	EmpleadoNodo* actual = primero;
 
+	do {
+		cout << "{ codigo: " << actual->getCodigo() << " nombre: " << actual->getNombre() << " salario: " << actual->getSalario() << " } " << endl;
+		actual = actual->getSiguiente();
+	} while (actual != primero);
 }
