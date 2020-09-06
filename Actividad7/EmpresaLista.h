@@ -14,7 +14,7 @@ public:
 
 	bool estaVacia();
 	bool agregarEmpleado(int, const char*, float);
-	bool insertarEmpleado(int, const char*, float);
+	bool insertarEmpleado(int, int, const char*, float);
 	bool eliminarEmpleado(int);
 	void actualizarSalarios(float);
 

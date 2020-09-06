@@ -9,7 +9,7 @@ int main() {
 	empleado.agregarEmpleado(1003, "Karen", 1700);
 	empleado.agregarEmpleado(1004, "Emilio", 1100);
 
-	empleado.insertarEmpleado(1000, "Tommy", 1300);
+	empleado.insertarEmpleado(2, 1000, "Tommy", 1300);
 
 	empleado.eliminarEmpleado(1002);
 
