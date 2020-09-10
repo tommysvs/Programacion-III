@@ -5,5 +5,9 @@ int main() {
 	EntidadBancaria::ingresarCliente();
 	EntidadBancaria::consultarClientes();
 
+	EntidadBancaria::ingresarCuenta();
+	EntidadBancaria::ingresarCuenta();
+	EntidadBancaria::ingresarCuenta();
+
 	_getch();
 }
