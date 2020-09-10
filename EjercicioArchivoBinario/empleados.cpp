@@ -68,3 +68,49 @@ void consultaEmpleados() {
 
 	empleadosIn.close();
 }
+
+void desactivarEmpleado(int _posEmpleado) {
+	if (_posEmpleado > cantidadEmpleados()) {
+		cout << "Posicion de empleados incorrecta!" << endl;
+		return;
+	}
+
+	fstream empleadosInOut("empleados.bin", ios::in | ios::out | ios::binary);
+
+	if (!empleadosInOut) {
+		cout << "Error al intentar abrir el archivo empleados.bin\n\n";
+		return;
+	}
+
+	int posArchivo = (_posEmpleado - 1) * sizeof(empleados);
+	empleadosInOut.seekg(posArchivo, ios::beg);
+
+	empleados aModificar;
+
+	empleadosInOut.read(reinterpret_cast<char*>(&aModificar), sizeof(empleados));
+
+	aModificar.activo = false;
+
+	empleadosInOut.seekp(posArchivo, ios::beg);
+
+	empleadosInOut.write(reinterpret_cast<char*>(&aModificar), sizeof(empleados));
+
+	cout << "Empleado desactivado!" << endl;
+
+	empleadosInOut.close();
+}
+
+int cantidadEmpleados() {
+	fstream empleadosIn("empleados.bin", ios::in | ios::binary);
+
+	if (!empleadosIn) {
+		cout << "Error al intentar abrir el archivo empleados.bin\n\n";
+		return -1;
+	}
+
+	empleadosIn.seekg(0, ios::end);
+
+	int pos = empleadosIn.tellg();
+
+	return pos / sizeof(empleados);
+}

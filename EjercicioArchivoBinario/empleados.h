@@ -13,5 +13,7 @@ struct empleados {
 
 void registroEmpleados();
 void consultaEmpleados();
+void desactivarEmpleado(int);
+int cantidadEmpleados();
 
 #endif // !EMPLEADOS_H
