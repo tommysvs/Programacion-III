@@ -9,5 +9,7 @@ int main() {
 	EntidadBancaria::ingresarCuenta();
 	EntidadBancaria::ingresarCuenta();
 
+	EntidadBancaria::consultarCuentas();
+
 	_getch();
 }

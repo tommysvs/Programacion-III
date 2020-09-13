@@ -4,11 +4,11 @@
 #define EMPLEADOS_H
 
 struct empleados {
-	int codigo;
-	char nombre[30];
-	char puesto[15];
-	int codigoJefe;
-	bool activo;
+	int codigo;			//4 bytes
+	char nombre[30];	//30 bytes
+	char puesto[15];	//15 bytes
+	int codigoJefe;		//4 bytes
+	bool activo;		//1 byte
 };
 
 void registroEmpleados();
