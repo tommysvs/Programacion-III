@@ -25,6 +25,26 @@ NodoArbol* ArbolBinario::agregarRec(NodoArbol* _raiz, const char* _nombre) {
 	return _raiz;
 }
 
+int ArbolBinario::obtenerPeso() {
+	int peso;
+
+	return peso;
+}
+
+int ArbolBinario::obtenerAlturaMaxima() {
+	int alturaMax;
+
+	return alturaMax;
+}
+
+void ArbolBinario::guardarElementos() {
+
+}
+
+void ArbolBinario::cargarElementos() {
+
+}
+
 void ArbolBinario::imprimir() {
 	imprimirRec(raiz);
 }
