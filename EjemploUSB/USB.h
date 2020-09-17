@@ -21,7 +21,7 @@ struct fileEntry {
 
 struct dataBlock {
 	char data[1020];
-	unsigned int siguienteBloque;
+	int siguienteBloque;
 };
 
 class USB {
