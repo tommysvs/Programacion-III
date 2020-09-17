@@ -13,6 +13,7 @@ class Materias {
 public:
 	void agregarMateria();
 	void imprimirMaterias();
+	bool buscarMateria(int);
 };
 
 #endif // !MATERIAS_H
