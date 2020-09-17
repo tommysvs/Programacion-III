@@ -45,7 +45,21 @@ void Notas::agregarNota() {
 }
 
 void Notas::listarNotas() {
+	ifstream notaIn("notas.dat", ios::in | ios::binary);
 
+	notas leer_nota;
+
+	notaIn.seekg(0, ios::beg);
+
+	notaIn.read(reinterpret_cast<char*>(&leer_nota), sizeof(notas));
+
+	while (!notaIn.eof()) {
+		cout << "Nota { alumno: " << leer_nota.cuenta << ", materia: " << leer_nota.codigo << ", nota: " << leer_nota.nota << " }" << endl;
+
+		notaIn.read(reinterpret_cast<char*>(&leer_nota), sizeof(notas));
+	}
+
+	notaIn.close();
 }
 
 void Notas::actualizarPromedio(int _codigoAlumno) {

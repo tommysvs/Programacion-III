@@ -9,7 +9,7 @@ void Alumnos::agregarAlumno() {
 
 	alumno nuevo_alumno;
 
-	cout << "Ingrese numero de Cuenta: ";
+	cout << "Ingrese numero de cuenta: ";
 	cin >> nuevo_alumno.cuenta_alumno;
 
 	cout << "Ingrese nombre de alumno: ";

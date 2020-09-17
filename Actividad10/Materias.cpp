@@ -23,10 +23,11 @@ void Materias::agregarMateria() {
 	materiasOut.write(reinterpret_cast<const char*>(&nueva_materia), sizeof(materia));
 
 	materiasOut.close();
+
+	cout << "Materia agregada." << endl;
 }
 
 void Materias::imprimirMaterias() {
-
 	ifstream materiaIn("materias.dat", ios::in | ios::binary);
 
 	materia leer_materia;
