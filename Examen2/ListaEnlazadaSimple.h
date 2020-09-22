@@ -3,6 +3,8 @@
 #ifndef LISTA_ENLAZADA_SIMPLE
 #define LISTA_ENLAZADA_SIMPLE
 
+#include "Nodo.h"
+
 class ListaEnlazadaSimple {
 private:
 	const char* name[30];
@@ -11,8 +13,12 @@ private:
 	const char* date[12];
 	double total;
 
-	ListaEnlazadaSimple* siguiente;
+	Nodo* primero;
 public:
+	ListaEnlazadaSimple();
+
+	bool estaVacia();
+
 	void cargarDatos(int, int, int);
 	double obtenerTotalxMes(int);
 	void eliminarDatosMes(int);

@@ -23,7 +23,7 @@ void Utilerias::imprimirCantidadPorTipoPago() {
 	ifstream registrosIn("datab.bin", ios::in | ios::binary);
 
 	if (!registrosIn) {
-		cout << "Error al intentar leer el archivo datab.bin\n\n";
+		cout << "Error al intentar leer el archivo datab.bin" << endl;
 		return;
 	}
 

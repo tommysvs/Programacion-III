@@ -19,8 +19,6 @@ struct registro {
 };
 
 class Utilerias {
-private:
-		
 public:
 	static int obtenerCantidadRegistros();
 	static void imprimirCantidadPorTipoPago();
